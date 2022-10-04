@@ -19,7 +19,8 @@ public class SpringWebLoginApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		String contra = "12345";	
+		String contra = "12345";
+		encoder.encode(contra);	
 		
 	}
 

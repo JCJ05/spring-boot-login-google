@@ -11,6 +11,8 @@
       <div>
 
         <div th:if="${cierra != null}" th:text="${cierra}"></div>
+
+        <h4><a th:href="@{/oauth2/authorization/google}">Iniciar Sesion Con Google</a></h4> 
           
           <form th:action="@{/login}" method="post">
                 

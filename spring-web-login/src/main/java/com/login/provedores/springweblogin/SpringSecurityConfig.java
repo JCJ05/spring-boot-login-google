@@ -66,7 +66,10 @@ public class SpringSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
-        http.authorizeRequests()
+        http.sessionManagement(session -> session 
+           .invalidSessionUrl("/invalidSession.html")
+        )
+            .authorizeRequests()
             .antMatchers("/prueba","/login", "/oauth/**").permitAll()
             .anyRequest().authenticated()
             .and()
